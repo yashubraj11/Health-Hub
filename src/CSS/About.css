@@ -1,0 +1,187 @@
+/* General Page Styles */
+.about-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* --- Banner --- */
+.about-banner {
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  background-position: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-overlay h1 {
+  color: #fff;
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: fadeInDown 1.5s ease;
+}
+
+.banner-overlay h1 span {
+  color: #00b4d8;
+}
+
+/* --- About Section --- */
+.about-section {
+  padding: 80px 100px;
+  background-color: #f9fafb;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.about-text h2 {
+  font-size: 2.2rem;
+  color: #023e8a;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* --- Vision Section --- */
+.vision-section {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+  padding: 100px 50px;
+}
+
+.vision-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 80px 40px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.vision-overlay h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.vision-overlay p {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+.vision-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.vision-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #023e8a;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision-card h4 {
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+.vision-card p {
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.vision-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Animations --- */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 60px 40px;
+  }
+
+  .about-container {
+    gap: 30px;
+  }
+
+  .about-image img {
+    width: 100%;
+  }
+
+  .banner-overlay h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 50px 20px;
+  }
+
+  .vision-overlay {
+    padding: 50px 20px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 2rem;
+  }
+}

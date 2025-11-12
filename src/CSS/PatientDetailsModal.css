@@ -1,0 +1,139 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 920px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  position: relative;
+  box-shadow: 0 12px 40px rgba(2, 62, 138, 0.18);
+  overflow: hidden;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  right: 14px;
+  top: 12px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Title */
+.modal-title {
+  color: #023e8a;
+  text-align: left;
+  margin: 6px 0 18px 0;
+  font-size: 1.4rem;
+}
+
+/* Horizontal details layout */
+.details-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.detail-item {
+  background: #f7fbff;
+  border-radius: 10px;
+  padding: 12px 14px;
+  flex: 1 1 30%;
+  min-width: 160px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.detail-item.full-width {
+  flex-basis: 100%;
+}
+
+.detail-label {
+  font-size: 0.85rem;
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+
+.detail-value {
+  font-weight: 600;
+  color: #06283d;
+  word-break: break-word;
+}
+
+/* Actions */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.edit-btn,
+.delete-btn,
+.save-btn,
+.cancel-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.08s ease;
+}
+
+.edit-btn { background: #0077b6; color: #fff; }
+.edit-btn:hover { background: #025e8a; }
+
+.delete-btn { background: #d62828; color: #fff; }
+.delete-btn:hover { background: #b41f1f; }
+
+.save-btn { background: #0096c7; color: #fff; }
+.save-btn:hover { background: #0077b6; }
+
+.cancel-btn { background: #e6e6e6; color: #222; }
+.cancel-btn:hover { background: #d0d0d0; }
+
+/* Edit form layout */
+.edit-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.edit-form input {
+  padding: 10px 12px;
+  border: 1.6px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.edit-form input:focus {
+  border-color: #0077b6;
+  box-shadow: 0 0 6px rgba(0,119,182,0.12);
+}
+
+/* Responsive adjustments */
+@media (max-width: 880px) {
+  .detail-item { flex: 1 1 45%; }
+}
+
+@media (max-width: 560px) {
+  .modal-content { padding: 16px; }
+  .modal-title { font-size: 1.15rem; }
+  .detail-item { flex: 1 1 100%; }
+  .modal-actions { justify-content: center; }
+}
